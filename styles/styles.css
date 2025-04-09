@@ -1,0 +1,329 @@
+
+/* Login Page */
+
+body.login {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "neue-haas-unica", sans-serif;
+    font-weight: 700;
+    background-color: #8496b4;
+} 
+
+.login-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url('images/background_design.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+    pointer-events: none;
+}
+
+@keyframes triangleAnimation {
+    from {
+      transform: scale(1) rotate(0deg);
+    }
+    to {
+      transform: scale(0.5) rotate(360deg);
+    }
+}
+
+.triangle {
+    position: fixed;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background: #92a1bf;
+    animation: triangleAnimation infinite alternate ease-in-out;
+    z-index: 0;
+    pointer-events: none;
+}
+
+#triangle-1 { top: 15%; left: 20%; width: 7%; height: 14%; }
+#triangle-2 { top: 25%; left: 30%; width: 8%; height: 16%; }
+#triangle-3 { top: 45%; left: 40%; width: 10%; height: 20%; }
+#triangle-4 { top: 60%; left: 70%; width: 6%; height: 12%; }
+#triangle-5 { top: 50%; left: 25%; width: 9%; height: 18%; }
+#triangle-6 { top: 35%; left: 65%; width: 5%; height: 10%; }
+#triangle-7 { top: 10%; left: 40%; width: 12%; height: 24%; }
+#triangle-8 { top: 7%; left: 70%; width: 7%; height: 20%; }
+#triangle-9 { top: 70%; left: 35%; width: 6%; height: 12%; }
+#triangle-10 { top: 65%; left: 60%; width: 4%; height: 18%; }
+#triangle-11 { top: 25%; left: 55%; width: 4%; height: 18%; }
+
+.login-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.2);
+    text-align: center;
+    z-index: 2;
+}  
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+  
+label.login {
+    width: 150px;
+    text-align: left;
+
+    font-family: "neue-haas-unica", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.8rem;
+
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    margin-right: 20px;
+}
+  
+input[type="text"], input[type="password"] {
+    width: calc(100% - 160px);
+    max-width: 300px;
+    width: 300px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    padding-left: 15px;
+    margin: 5px;
+}
+  
+.login-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 10px;
+    width: 200px;
+    box-shadow: 2px 2px 4px #000033;
+}
+
+/* Logout & Back Button */
+
+.login-hint {
+    color: #889bbb;
+    margin-top: 10px;
+}
+
+.logout-button {
+    position: absolute;
+    top: 41px;
+    left: 40px;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    background-color: #e74c3c;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.logout-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.back-button {
+    position: absolute;
+    top: 41px;
+    left: 40px;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    background-color: transparent;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* O.W.C.A File Navigator */
+
+body.navigator {
+    font-family: Arial, sans-serif;
+    background-color: #4a4a4a;
+    color: white;
+    text-align: center;
+}
+
+.header {
+    background-color: #2c2c2c;
+    padding: 10px 20px;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.folder {
+    text-align: center;
+}
+
+.folder-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 150px;
+    padding: 20px;
+}
+
+.folder span {
+    display: block;
+    margin-top: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+}
+
+.folder img {
+    width: 360px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.folder img:hover {
+    transform: scale(1.1);
+}
+
+a.folder {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Data Corrupted & Link Control */
+
+.data-corrupted {
+    background-color: #e74c3c;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 30px;
+    margin-top: 50px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.link {
+    color: white;
+}
+
+/* Agent File Control */
+
+body.agent {
+    font-family: Arial, sans-serif;
+    background-color: #4a4a4a;
+    color: white;
+    text-align: center;
+}
+
+.file-label {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.agent-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 150px;
+    padding: 20px;
+}
+
+.agent-file {
+    text-align: center;
+}
+
+.agent-file img {
+    width: 160px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.agent-file img:hover {
+    transform: scale(1.1);
+}
+
+.agent-file span {
+    display: block;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
+.agent-modal {
+    display: none;
+    position: fixed; 
+    z-index: 1000; 
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.8);
+}
+
+.agent-modal-content {
+    background-color: #2c2c2c;
+    margin: 15% auto; 
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 1000px; 
+    color: white;
+}
+
+.modal-close-btn {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.modal-close-btn:hover, .close-btn:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#modalText {
+    background-color: #1e1e1e;
+    color: #00ff88;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    padding: 1em;
+    border-radius: 6px;
+    white-space: pre-wrap;
+    overflow-x: auto;
+    box-shadow: inset 0 0 10px #00000099;
+    max-height: 70vh;
+}
+
+.modal-blinking-cursor {
+    animation: blink 1s steps(1) infinite;
+    color: #00ff88;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+#agentFileText, .blinking-cursor {
+    display: inline;
+    white-space: pre-wrap;
+}
